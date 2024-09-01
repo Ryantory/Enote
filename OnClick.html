@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Card.css">
+    <title>Animated Flex Cards</title>
+    
+    <link rel="stylesheet" href="Review.css">
+    <!-- Fav icon -->
+    <link rel="shortcut icon" href="image/comment.jpg">
+    <!-- poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- using-Font-Awesome -->
+    <script src="https://kit.fontawesome.com/0fa56203e2.js" crossorigin="anonymous"></script>
+
+    <!-- commentPrompt -->
+    <link rel="stylesheet" href="commentPrompt.css">
+    <script src="https://kit.fontawesome.com/0fa56203e2.js" crossorigin="anonymous"></script>
+    <script src="rating.js" defer></script>
+
+</head>
+<body>
+    <a href="Home.html" class="home-button">Return to Home</a>
+    <style>
+        .home-button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .home-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+    
+    <!-- card animation -->
+    <div class ="wrapper">
+        <div class = "container">
+            <input type="radio" name="slide" id="c1" checked>
+            <label for="c1" class="card">
+                <div class="row">
+                    <div class ="icon">1</div>
+                    <div class = "description">
+                        <h4>Winter</h4>
+                        <p>Winter has so much to offer-creative activities hioghaeoighoaeigheoighoahgoiheoaghoeighaeioweiofjaowiefjaiweofjojfiawjfoijweofjawejoiwgaionaoegneia</p>
+                    </div>
+                </div>
+            </label>
+            <input type="radio" name="slide" id="c2" >
+            <label for="c2" class="card">
+                <div class="row">
+                    <div class ="icon">2</div>
+                    <div class = "description">
+                        <h4>Digital technology</h4>
+                        <p>Gets better every day - stay tuned</p>
+                    </div>
+                </div>
+            </label>
+            <input type="radio" name="slide" id="c3" >
+            <label for="c3" class="card">
+                <div class="row">
+                    <div class ="icon">3</div>
+                    <div class = "description">
+                        <h4>Gloabalization</h4>
+                        <p>Help people all over the world</p>
+                    </div>
+                </div>
+            </label>
+            <input type="radio" name="slide" id="c4" >
+            <label for="c4" class="card">
+                <div class="row">
+                    <div class ="icon">4</div>
+                    <div class = "description">
+                        <h4>New technologies</h4>
+                        <p>Space engineering becomes more and more advanced</p>
+                    </div>
+                </div>
+            </label>
+        </div>    
+    </div>
+     <!-- Testimonial -->
+     <section id="testimonials">
+        <!-- heading -->
+         <div class="testimonial-heading">
+                   <span>Comments</span>
+                   <h1>Clients Say</h1>
+         </div>
+         <!-- replace testimonials by script -->
+         <!-- testimonials-box-container -->
+
+          <!-- use javascript to generate testimonials -->
+          <div class="testimonial-box-container"></div>  
+        </section>
+    
+    <!-- comment prompt (not yet) -->
+    <div class="commentPrompt">
+        <div class="prompt">
+        <div class="rating-box">
+            <header>How was your experience?</header>
+            <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </div>
+        </div>
+        <input class="type-comment-input"  onchange="typeComment()" type="text" id="placeholder-input" placeholder="Write a comment...">
+        <button  class="submit" onclick="submitComment()">Submit</button>   
+    </div>
+    </div>
+
+    <!-- testimonial -->
+    <script src="testimonial.js"></script>
+    <script src="comment.js"></script>
+
+</body>
+</html>

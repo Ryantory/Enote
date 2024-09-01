@@ -1,0 +1,110 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+body{
+    background-color: #eeeeea;
+}
+.wrapper{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    /* vertical alignment */
+    align-items: center; 
+    /* horizontal alignment */
+    justify-content: center;
+}
+.container{
+    /* border: solid black 2px; */
+    height: 400px;
+    display: flex;
+    flex-wrap: nowrap;
+    /* why? what if it's center */
+    justify-content: start;
+}
+/* not yet */
+.card{
+    border: solid black 2px;
+    width: 80px;
+    /* border-radius: 0.75rem; */
+    /* no tiling */
+    background-size: cover;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 2rem;
+    margin: 0 10px;
+    display:flex;
+    /* align content to the end of the flex region */
+    align-items: flex-end;
+    transition: .6s cubic-bezier( .28, -0.03,0, .99);
+    box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
+}
+
+.card > .row{
+ /* border: solid black 2px; */
+ color:white;
+ display: flex;
+ flex-wrap: nowrap;
+}
+
+.card > .row > .icon{
+    background: #223;
+    color: white;
+    border-radius: 50%;
+    width:50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:15px;
+} 
+
+.card > .row > .description{
+    border: solid black 2px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    height: 80px;
+    width:520px;
+    opacity: 10;
+    transform: translateY(30px);
+    transition-delay: .3s;
+    transition: all .3s ease;
+}
+
+.description p{
+    color: #b0b0ba;
+    padding-top: 5px;
+}
+
+.description h4{
+    text-transform: uppercase;
+}
+/* hide radio button */
+input[type=radio]{
+    display: none;
+}
+input:checked + label{
+    width: 600px;
+}
+
+input:checked + label .description{
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+.card[for="c1"]{
+    background-image: url(./image/pic1.jpg);
+}
+.card[for="c2"]{
+    background-image: url(./image/pic2.jpg);
+}
+.card[for="c3"]{
+    background-image: url(./image/pic3.jpg);
+}
+.card[for="c4"]{
+    background-image: url(./image/pic4.jpg);
+}
