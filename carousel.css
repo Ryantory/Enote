@@ -1,107 +1,85 @@
-/* body{
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */
-
-.slider{
-    margin-top:20px;
-    width: 770px;
-    height:500px;
-    border-radius: 10px;
-    overflow: hidden;
-    /* no effect */
-    justify-content: center;
-
-}
-
-.slides{
-    width: 500%;
-    height: 500 px;
-    display: flex;
-
-}
-/* what is this? */
-.slides input{
-    display:none;
-}
-
-.slide{
-    width: 20%;
-    transition: 2s;
-}
-
-.slide img{
+/* Slider container */
+.slider {
+    position: relative;
+    margin-top: 20px;
     width: 770px;
     height: 500px;
-}
-
-/* css for manual navigation */
-.navigation-manual{
-    position: absolute;
-    width: 770px;
-    /* adjusted */
-    margin-top: -44px;
-    display: flex;
-    justify-content: center;
-}
-.manual-btn{
-    border: 2px solid #40D3DC;
-    padding: 5px;
     border-radius: 10px;
-    cursor: pointer;
-    transition: 1s;
+    overflow: hidden;
 }
-/* what is this? */
-.manual-btn:not(:last-child){
-    margin-right: 40px;
+.slider input{
+    display: none;
 }
 
-.manual-btn:hover{
-    background: #40D3DC;
+/* Wrapper for all the slides */
+.slides {
+    position: relative;
+    width: 100%;
+    height: 100%;
 }
-#radio1:checked ~ .first{
-    margin-left: 0;
+
+/* Each slide is positioned absolutely, initially hidden */
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0; /* Make slides initially invisible */
+    transition: opacity 2s ease-out, transform 0s ease-in; /* Opacity fades in slowly, scaling happens quickly */
 }
-#radio2:checked ~ .first{
-    margin-left: -20%;
+
+/* Ensure images take up the full slide */
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures images maintain aspect ratio */
 }
-#radio3:checked ~ .first{
-    margin-left: -40%;
-}
-#radio4:checked ~ .first{
-    margin-left: -60%;
-}
-/* automation navigation */
-.navigation-auto{
+
+/* Navigation buttons at the bottom of the slider */
+.navigation-auto {
+    z-index: 100;
     position: absolute;
     display: flex;
     width: 770px;
     justify-content: center;
     margin-top: 460px;
 }
-.navigation-auto div{
+
+/* Style for navigation buttons (labels) */
+.navigation-auto label {
     border: 2px solid #40D3DC;
     padding: 5px;
     border-radius: 10px;
-    transition:1s;
+    transition: 1s;
+    cursor: pointer;
 }
-.navigation-auto div:not(:last-child){
+
+/* Spacing between navigation buttons */
+.navigation-auto label:not(:last-child) {
     margin-right: 40px;
 }
 
-#radio1:checked ~ .navigation-auto .auto-btn1{
-    background: #40D3DC;
+/* Show the first slide when radio1 is checked */
+#radio1:checked ~ .slides .first {
+    opacity: 1;
+    z-index: 1;
 }
-#radio2:checked ~ .navigation-auto .auto-btn2{
-    background: #40D3DC;
+
+/* Show the second slide when radio2 is checked */
+#radio2:checked ~ .slides .slide:nth-of-type(2) {
+    opacity: 1;
+    z-index: 1;
 }
-#radio3:checked ~ .navigation-auto .auto-btn3{
-    background: #40D3DC;
+
+/* Show the third slide when radio3 is checked */
+#radio3:checked ~ .slides .slide:nth-of-type(3) {
+    opacity: 1;
+    z-index: 1;
 }
-#radio4:checked ~ .navigation-auto .auto-btn4{
-    background: #40D3DC;
+
+/* Show the fourth slide when radio4 is checked */
+#radio4:checked ~ .slides .slide:nth-of-type(4) {
+    opacity: 1;
+    z-index: 1;
 }

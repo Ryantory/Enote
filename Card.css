@@ -98,14 +98,14 @@ input:checked + label .description{
 }
 
 .card[for="c1"]{
-    background-image: url(./image/pic1.jpg);
+    background-image: url(./image/校園公告模板.jpg);
 }
 .card[for="c2"]{
-    background-image: url(./image/pic2.jpg);
+    background-image: url(./image/校園公告模板2.jpg);
 }
 .card[for="c3"]{
-    background-image: url(./image/pic3.jpg);
+    background-image: url(./image/校園公告模板3.jpg);
 }
 .card[for="c4"]{
-    background-image: url(./image/pic4.jpg);
+    background-image: url(./image/校園公告模板4.jpg);
 }

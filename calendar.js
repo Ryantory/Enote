@@ -9,8 +9,7 @@ const backDrop = document.getElementById('modalBackDrop');
 const eventTitleInput = document.getElementById('eventTitleInput');
 const weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday'];
 
-const admin = false; 
-
+const admin = false;
 function openModal(date){
     clicked = date;
 
@@ -67,14 +66,14 @@ function load(){
             if( i - paddingDays === day && nav === 0){
                 daySquare.id = 'currentDay';
             }
-            // creat div and put it into day square
+            // creat div and put it into day square (modify to fetch cloud data)
             if(eventForDay){
                 const eventDiv = document.createElement('div');
                 eventDiv.classList.add('event');
                 eventDiv.innerText = eventForDay.title;
                 daySquare.appendChild(eventDiv);
             }
-            
+            // manual input
             if(admin)
             {
                 daySquare.addEventListener('click', () => openModal(dayString));
