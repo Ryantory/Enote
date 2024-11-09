@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Radio Button Card</title>
+  <style>
+    /* Reset some default styles */
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: #f0f0f0;
+    }
+
+    /* Hide radio buttons */
+    input[type="radio"] {
+      display: none;
+    }
+
+    /* Card styles */
+    .card {
+      display: inline-block;
+      width: 300px;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      color: #333;
+      text-align: center;
+    }
+
+    /* Hover effect */
+    .card:hover {
+      background-color: #f0f8ff;
+    }
+
+    /* When radio button is selected, apply active style */
+    input[type="radio"]:checked + .card {
+      background-color: #d1e7ff;
+      color: #222;
+    }
+
+    /* Layout for the content within the card */
+    .row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .icon {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #004080;
+    }
+
+    .description h4 {
+      margin: 0;
+      font-size: 1.5rem;
+      color: #004080;
+    }
+
+    .description p {
+      font-size: 0.9rem;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <input type="radio" name="slide" id="c1" checked>
+  <label for="c1" class="card">
+    <div class="row">
+      <div class="icon">1</div>
+      <div class="description">
+        <h4>Winter</h4>
+        <p>Winter has so much to offer - creative activities and more. Enjoy everything winter has to bring.</p>
+      </div>
+    </div>
+  </label>
+
+</body>
+</html>
