@@ -2,8 +2,8 @@
 .slider {
     position: relative;
     margin-top: 20px;
-    width: 770px;
-    height: 500px;
+    width: 1200px;
+    height:800px;
     border-radius: 10px;
     overflow: hidden;
 }
@@ -16,6 +16,8 @@
     position: relative;
     width: 100%;
     height: 100%;
+    /* justify-content: center; */
+
 }
 
 /* Each slide is positioned absolutely, initially hidden */
@@ -34,6 +36,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover; /* Ensures images maintain aspect ratio */
+
 }
 
 /* Navigation buttons at the bottom of the slider */
@@ -41,9 +44,10 @@
     z-index: 100;
     position: absolute;
     display: flex;
-    width: 770px;
+    width: 100%; /* Allow navigation buttons to take full width */
     justify-content: center;
-    margin-top: 460px;
+    bottom: 20px;               /* Adjust to position the navigation near the bottom */
+
 }
 
 /* Style for navigation buttons (labels) */
@@ -53,6 +57,7 @@
     border-radius: 10px;
     transition: 1s;
     cursor: pointer;
+    margin: 0 5px; /* Space out buttons */
 }
 
 /* Spacing between navigation buttons */
