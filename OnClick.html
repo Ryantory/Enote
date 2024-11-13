@@ -100,22 +100,24 @@
         </section>
     
     <!-- comment prompt (not yet) -->
-    <div class="commentPrompt">
+    <div class="commentPrompt" id="commentPrompt">
         <div class="prompt">
-        <div class="rating-box">
-            <header>How was your experience?</header>
-            <div class="stars">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
+            <button class="close-btn" onclick="closePrompt()">✖</button>
+            <div class="rating-box">
+                <header>How was your experience?</header>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
             </div>
+            <input class="type-comment-input" onchange="typeComment()" type="text" id="placeholder-input" placeholder="Write a comment...">
+            <button class="submit" onclick="submitComment()">Submit</button>   
         </div>
-        <input class="type-comment-input"  onchange="typeComment()" type="text" id="placeholder-input" placeholder="Write a comment...">
-        <button  class="submit" onclick="submitComment()">Submit</button>   
     </div>
-    </div>
+    
     </div>
     <!-- testimonial -->
     <script src="testimonial.js"></script>

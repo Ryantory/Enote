@@ -52,8 +52,9 @@ body{
 }
 
 .card > .row > .icon{
-    background: #223;
-    color: white;
+    background: white;
+    color: black ;
+    font-weight: bold;
     border-radius: 50%;
     width:50px;
     display: flex;

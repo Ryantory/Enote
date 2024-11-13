@@ -7,6 +7,10 @@ function makeComment() {
         console.error("No elements with class 'commentPrompt' found.");
     }
 }
+
+function closePrompt(){
+    comments[0].classList.remove("active") // close comment prompt
+}
 function typeComment(){
     placeholderText = document.getElementById('placeholder-input').value;
     console.log(placeholderText); 

@@ -14,9 +14,11 @@
     height: 100%;
     position: fixed;
     background: linear-gradient(45deg, #ffd105,#ffb283);
+
+
   }
 .commentPrompt.active {
-    height: 100vh;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -29,6 +31,13 @@
     padding: 25px 50px 35px;
     border-radius: 25px;
     box-shadow: rgba(0,0,0,0.05);
+    
+    /* resize prompt */
+    max-width: 800px; /* Increase maximum width */
+    /* max-height: 90vh; Increase maximum height while ensuring it fits on screen */
+    width: 100%; /* Full width of the screen */
+    height: 30vh;
+     overflow-y: auto;/* Allow scrolling if content exceeds max height */
 }
 .commentPrompt .rating-box header{
     font-size: 22px;
@@ -57,6 +66,7 @@
     border: 1px solid black;
     border-radius: 4px;
     width: 100%; /* Full width of the container */
+    height: 20vh;
     box-sizing: border-box; /* Include padding and border in width calculation */
     transition: border-color 0.3s; /* Smooth transition for focus */
 }
@@ -64,3 +74,14 @@
     border-color: #007bff; /* Change border color on focus */
     outline: none; /* Remove default focus outline */
 }
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    color: #333;
+}
+
