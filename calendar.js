@@ -61,7 +61,7 @@ function load(){
         if(i > paddingDays){
             daySquare.innerText = i- paddingDays;
             daySquare.style.color = "black";          // Set the text color
-            daySquare.style.fontSize = "20px";       // Set the font size
+            daySquare.style.fontSize = "50px";       // Set the font size
             daySquare.style.fontWeight = "bold";     // Set the font weight
             daySquare.style.border= "1px solid black"; /* Black border */ 
             // daySquare.style.backgroundColor = "#f0f0f0"; // Set the background color
