@@ -20,16 +20,17 @@ body{
 }
 .container{
     /* border: solid black 2px; */
-    height: 400px;
+    width: 100%;
+    height: 600px;
     display: flex;
     flex-wrap: nowrap;
     /* why? what if it's center */
-    justify-content: start;
+    justify-content: center;
 }
 /* not yet */
 .card{
     border: solid black 2px;
-    width: 80px;
+    width: 100px;
     /* border-radius: 0.75rem; */
     /* no tiling */
     background-size: cover;
@@ -90,7 +91,7 @@ input[type=radio]{
     display: none;
 }
 input:checked + label{
-    width: 600px;
+    width: 800px;
 }
 
 input:checked + label .description{
